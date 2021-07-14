@@ -1,0 +1,414 @@
+$rex = 2rem / 5
+
+html {
+    background-color: #fff;
+    color: #000;
+    font-size: 12px
+}
+
+html, body, #app {
+    height: 100%;
+    min-height: 100%
+}
+
+#app {
+    text-align: left
+}
+
+input {
+    border: none
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-overflow-scrolling: touch;
+    outline: none;
+}
+
+body {
+    margin: 0 auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 1.4;
+    font-family: PingFang-SC-Regular !important;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100% !important;
+}
+
+.htmlOverHide {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+li {
+    list-style: none;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+/** iconFont **/
+.iconFont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    vertical-align: middle
+}
+
+/** publice **/
+img {
+    border: none;
+    width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: top;
+}
+
+.imgClick {
+    pointer-events: none;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/** 适配android/ios line-height属性值不一致的问题 **/
+.line_height {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+a {
+    color: #666;
+    outline: none;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+/**字体inco嵌入**/
+@font-face {
+    font-family: 'iconfont';  /* project id 262244 */
+    src: url('//at.alicdn.com/t/font_262244_piwtbdibiv.eot');
+    src: url('//at.alicdn.com/t/font_262244_piwtbdibiv.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_262244_piwtbdibiv.woff') format('woff'),
+            url('//at.alicdn.com/t/font_262244_piwtbdibiv.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_262244_piwtbdibiv.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: PingFang-SC-Regular !important;
+}
+
+//盒子超出最大宽度自动居中-公用class
+.story-middle {
+    width: 100%;
+    max-width 37.5 *$rex;
+    margin 0 auto;
+}
+
+/** 隐藏显示点 **/
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ellipsis2 {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.ellipsis3 {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.playIngGif {
+    width: 26px;
+    height: 12px;
+    position: relative;
+    i {
+        position: absolute;
+        bottom: 0px;
+        width: 3px;
+        height: 14px;
+        background: rgba(142, 142, 142, 1);
+        border-radius: 2px 2px 0px 0px;
+    }
+}
+
+.playIngGif .i1 {
+    height: 6px;
+    left: 0px;
+    animation: playIngGif1 1s linear infinite;
+}
+
+.playIngGif .i2 {
+    height: 9px;
+    left: 5px;
+    animation: playIngGif1 1s 0.4s linear infinite;
+}
+
+.playIngGif .i3 {
+    height: 11px;
+    left: 10px;
+    animation: playIngGif1 1s 0.2s linear infinite;
+}
+
+.playIngGif .i4 {
+    height: 8px;
+    left: 15px;
+    animation: playIngGif1 1s 0.4s linear infinite;
+}
+
+.playIngGif .i5 {
+    height: 10px;
+    left: 20px;
+    animation: playIngGif1 1s linear infinite;
+}
+.playIngGifNone i{
+    animation: none !important;
+}
+
+@keyframes playIngGif1 {
+    0% {
+        height: 6px;
+    }
+    50% {
+        height: 12px;
+    }
+    100% {
+        height: 6px;
+    }
+}
+
+/*按钮默认放大动效*/
+.btn_amplification {
+    -webkit-animation: btnAmplification 0.4s infinite linear;
+    -o-animation: btnAmplification 0.4s infinite linear;
+    animation: btnAmplification 0.4s infinite linear;
+}
+@-webkit-keyframes btnAmplification {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes btnAmplification {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/*加载中动效*/
+.mask-loading {
+    .runLoader {
+        margin: 0 auto 2*$rex;
+        width: 2.8*$rex;
+        height: 2.8*$rex;
+        box-sizing: border-box;
+        border: .3*$rex solid #fff;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        animation: loader-rotate .6s linear infinite;
+    }
+    .text {
+        text-align: center;
+        font-size: 1.2*$rex;
+        color: #fff;
+        display: -webkit-box;
+        display: flex;
+        justify-content: center;
+        .pulse-container {
+            display: -webkit-box;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: .2*$rex;
+            margin-left: .2*$rex;
+        }
+        .pulse-bubble {
+            width: .4*$rex;
+            height: .4*$rex;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .pulse-bubble-1 {
+            -webkit-animation: pulse .4s ease 0s infinite alternate;
+            -o-animation: pulse .4s ease 0s infinite alternate;
+            animation: pulse .4s ease 0s infinite alternate;
+        }
+        .pulse-bubble-2 {
+            -webkit-animation: pulse .4s ease .2s infinite alternate;
+            -o-animation: pulse .4s ease .2s infinite alternate;
+            animation: pulse .4s ease .2s infinite alternate;
+        }
+        .pulse-bubble-3 {
+            -webkit-animation: pulse .4s ease .4s infinite alternate;
+            -o-animation: pulse .4s ease .4s infinite alternate;
+            animation: pulse .4s ease .4s infinite alternate;
+        }
+    }
+    @-webkit-keyframes loader-rotate {
+        0% {
+            -webkit-transform: rotate(0);
+            -moz-transform: rotate(0);
+            -ms-transform: rotate(0);
+            -o-transform: rotate(0);
+            transform: rotate(0);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes loader-rotate {
+        0% {
+            -webkit-transform: rotate(0);
+            -moz-transform: rotate(0);
+            -ms-transform: rotate(0);
+            -o-transform: rotate(0);
+            transform: rotate(0);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @-webkit-keyframes pulse {
+        0% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            opacity: .25;
+            -webkit-transform: scale(.75);
+            -moz-transform: scale(.75);
+            -ms-transform: scale(.75);
+            -o-transform: scale(.75);
+            transform: scale(.75);
+        }
+    }
+    @keyframes pulse {
+        0% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            opacity: .25;
+            -webkit-transform: scale(.75);
+            -moz-transform: scale(.75);
+            -ms-transform: scale(.75);
+            -o-transform: scale(.75);
+            transform: scale(.75);
+        }
+    }
+}
+//.view {
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//    width: 100%;
+//    height: 100%;
+//    transition: all .5s cubic-bezier(.55,0,.1,1);
+//    z-index 1;
+//}
+//.slide-left-enter, .slide-right-leave-active {
+//    opacity: 0;
+//    -webkit-transform: translate(50px, 0);
+//    transform: translate(50px, 0);
+//}
+//.slide-left-leave-active, .slide-right-enter {
+//    opacity: 0;
+//    -webkit-transform: translate(-50px, 0);
+//    transform: translate(-50px, 0);
+//}
